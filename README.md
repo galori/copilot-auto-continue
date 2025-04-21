@@ -2,13 +2,10 @@
 
 A tiny console snippet that automatically clicks the **Continue** button in GitHub Copilot Chat Agent Mode, so you can keep your workflow moving without manual approval.
 
----
-
 ## Description
 
 When using Copilot’s **Agent Mode**, every action (even harmless ones like `git status`) prompts you to click **Continue**. This snippet removes that friction by auto‑clicking the button as soon as it appears—no more endless taps!
-
----
+![image](https://github.com/user-attachments/assets/b66a5766-bd1c-4e44-a33c-6006904209e9)
 
 ## Installation
 
@@ -55,15 +52,11 @@ When using Copilot’s **Agent Mode**, every action (even harmless ones like `gi
 })();
 ```
 
----
-
 ## Usage
 
 Once pasted, the script immediately begins watching for and clicking the **Continue** button whenever it appears.  
 
 You’ll see logs in your console each time it clicks.
-
----
 
 ## Stopping
 
