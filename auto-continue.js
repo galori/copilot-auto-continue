@@ -14,16 +14,28 @@
       continueBtn.click();
       lastClick = now;
       console.log('[auto] Clicked Continue');
+      return;
     }
 
-    // Keep
+    // Keep (toolbar)
     const keepBtn = Array.from(
       document.querySelectorAll('a.action-label[role="button"]')
     ).find(el => /^keep$/i.test(el.textContent?.trim()));
     if (keepBtn) {
       keepBtn.click();
       lastClick = now;
-      console.log('[auto] Clicked Keep');
+      console.log('[auto] Clicked Keep (action-label)');
+      return;
+    }
+
+    // Keep (monaco-text-button)
+    const keepBtnAlt = document.querySelector(
+      'a.monaco-button.default-colors.monaco-text-button[role="button"]'
+    );
+    if (keepBtnAlt && /keep/i.test(keepBtnAlt.textContent?.trim())) {
+      keepBtnAlt.click();
+      lastClick = now;
+      console.log('[auto] Clicked Keep (text-button)');
     }
   }
 
